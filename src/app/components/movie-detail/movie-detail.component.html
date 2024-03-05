@@ -1,0 +1,15 @@
+<button (click)="onClickBack()">Back</button>
+<div *ngIf="(movie$ | async); let movie">
+  <h1>{{ movie?.title }}</h1>
+  <div class="row">
+    <img src="{{ movie.posterUrl }}" alt="Movie poster">
+    <p class="movie-desc"><b>Summary: </b>{{ movie.desc }}</p>
+  </div>
+  <hr>
+  <h2>Details</h2>
+  <p><b>Box Office:</b> {{ movie.boxOfficeMillions | currencyMillions }}</p>
+  <p><b>Budget:</b> {{ movie.budgetMillions | currencyMillions }}</p>
+  <p><b>Duration:</b> {{ movie.durationMins | duration }}</p>
+  <p><b>Producers:</b> {{ movie.producers | nameList }}</p>
+  <p><b>Cinematographers:</b> {{ movie.cinematographers | nameList }}</p>
+</div>

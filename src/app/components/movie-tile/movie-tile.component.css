@@ -1,0 +1,7 @@
+.movie-desc {
+  width: calc(min(600px, 100%));
+}
+
+.subtitle-detail {
+  margin-left: 1rem;
+}

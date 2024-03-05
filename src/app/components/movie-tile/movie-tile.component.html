@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="movie-desc float-start">
+    <h3>{{ movie.title }}</h3>
+    <div>
+      <span class="subtitle-detail">Release Date: {{ movie.releaseDate }}</span>
+      <span class="subtitle-detail">Budget: {{ movie.budgetMillions | currencyMillions }}</span>
+      <span class="subtitle-detail">Duration: {{ movie.durationMins | duration }}</span>
+    </div>
+  </div>
+  <div class="float-end">
+    <button (click)="onClickDetails()">Details</button>
+  </div>
+</div>
+

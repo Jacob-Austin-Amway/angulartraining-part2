@@ -1,0 +1,8 @@
+<h2>Filters</h2>
+<span>
+  <label for="title">Title</label>
+  <input type="text" id="title" #title (keyup)="onTitleChange(title.value)">
+
+  <label for="year">Release Year</label>
+  <input type="number" id="year" #year (keyup)="onYearChange(+year.value)">
+</span>
