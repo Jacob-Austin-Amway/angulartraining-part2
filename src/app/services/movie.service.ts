@@ -15,7 +15,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  updateFilters(filters: MovieFilters) {
+  updateFilters(filters: MovieFilters = {} as MovieFilters) {
     this.filters = filters;
     this.fetchAll();
   }
